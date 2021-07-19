@@ -1,33 +1,25 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int multi8_bitshift(int x)
+int main()
 {
-    return x << 3;
+	int arr[10] = { 9, 17, 5, 6, 124, 112, 1, 3, 87, 55 };
+	int temp;
+	int length = sizeof(arr) / sizeof(int)
+
+		for (int i = 0; i < length; i++)
+		{
+			for (int j = 0; j < length; j++)
+			{
+				if (arr[j] > arr[j + 1])
+				{
+					temp = arr[j + 1];
+					arr[j + 1] = arr[j];
+					arr[j] = temp;
+				}
+			}
+		}
+
+	printf("%d", arr[i]);
+
+	return 0;
 }
-
-void cycle_do(int y, int z)
-{
-    int i;
-    scanf_s("%d", &i);
-    int count = 1;
-    do {
-                
-        z = y << count++;
-
-    } while (count <= i);
-
-    printf("%d", z);
-
-
-    }
-    int main()
-         {
-        int a;
-        scanf_s("%d", &a);
-        printf("%d\n", multi8_bitshift(a));
-
-        int b = 0;
-        cycle_do(a, b);
-
-        return 0;
-    }
